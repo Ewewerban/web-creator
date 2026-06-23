@@ -3,32 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mój Kreator Stron</title>
+    <title>Zaawansowany Kreator Stron PRO</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <div class="container">
-        <div class="sidebar">
-            <h2>Kreator Stron</h2>
-            <label for="page-title">Tytuł strony:</label>
-            <input type="text" id="page-title" placeholder="Moja nowa strona">
-
-            <label for="page-content">Treść główna:</label>
-            <textarea id="page-content" placeholder="Wpisz tutaj zawartość strony..."></textarea>
-
-            <label for="bg-color">Kolor tła:</label>
-            <input type="color" id="bg-color" value="#ffffff">
-
-            <button id="generate-btn">Generuj i Pobierz Stronę</button>
-        </div>
-
-        <div class="preview-area">
-            <h2>Podgląd na żywo:</h2>
-            <div id="preview-box">
-                <h1 id="preview-title">Tytuł strony</h1>
-                <p id="preview-text">Tutaj pojawi się Twoja treść...</p>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="logo">
+                <i class="fa-solid fa-laptop-code"></i>
+                <h2>WebBuilder <span>PRO</span></h2>
             </div>
-        </div>
+
+            <div class="sidebar-section">
+                <h3><i class="fa-solid fa-sliders"></i> Ustawienia globalne</h3>
+                <div class="control-group">
+                    <label>Kolor przewodzący:</label>
+                    <input type="color" id="primary-color" value="#00a8ff">
+                </div>
+                <div class="control-group">
+                    <label>Czcionka strony:</label>
+                    <select id="font-family">
+                        <option value="'Inter', sans-serif">Inter (Nowoczesna)</option>
+                        <option value="'Playfair Display', serif">Playfair (Elegancka)</option>
+                        <option value="'Roboto', sans-serif">Roboto (Klasyczna)</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="sidebar-section">
+                <h3><i class="fa-solid fa-layer-group"></i> Dodaj sekcję do strony</h3>
+                <div class="blocks-grid">
+                    <button class="add-block-btn" data-type="hero">
+                        <i class="fa-solid fa-window-maximize"></i> Hero (Baner)
+                    </button>
+                    <button class="add-block-btn" data-type="features">
+                        <i class="fa-solid fa-grip"></i> Funkcje (3 kolumny)
+                    </button>
+                    <button class="add-block-btn" data-type="cta">
+                        <i class="fa-solid fa-bullhorn"></i> Call to Action
+                    </button>
+                </div>
+            </div>
+
+            <button id="export-btn" class="main-btn">
+                <i class="fa-solid fa-download"></i> Pobierz gotowy kod HTML
+            </button>
+        </aside>
+
+        <main class="workspace">
+            <div class="workspace-header">
+                <span><i class="fa-solid fa-eye"></i> Tryb podglądu (Edytowalny na żywo)</span>
+            </div>
+            <div id="canvas" class="canvas"></div>
+        </main>
     </div>
 
     <script src="script.js"></script>
