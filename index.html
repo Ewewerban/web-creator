@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mój Kreator Stron</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h2>Kreator Stron</h2>
+            <label for="page-title">Tytuł strony:</label>
+            <input type="text" id="page-title" placeholder="Moja nowa strona">
+
+            <label for="page-content">Treść główna:</label>
+            <textarea id="page-content" placeholder="Wpisz tutaj zawartość strony..."></textarea>
+
+            <label for="bg-color">Kolor tła:</label>
+            <input type="color" id="bg-color" value="#ffffff">
+
+            <button id="generate-btn">Generuj i Pobierz Stronę</button>
+        </div>
+
+        <div class="preview-area">
+            <h2>Podgląd na żywo:</h2>
+            <div id="preview-box">
+                <h1 id="preview-title">Tytuł strony</h1>
+                <p id="preview-text">Tutaj pojawi się Twoja treść...</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
